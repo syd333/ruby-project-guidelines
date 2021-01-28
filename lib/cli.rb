@@ -2,6 +2,10 @@ class Cli
 
     attr_reader :current_user
 
+    def initialize 
+        @current_user = []
+    end
+
 def welcome
     #are you a current user or new user?
     puts
@@ -12,6 +16,7 @@ def welcome
     puts
     name_check = User.find{|user| user.name == user_name}
     @current_user = User.find_or_create_by(name: user_name)
+
     if name_check 
         puts "Welcome Back #{user_name}!"
         # current_user.main_menu
@@ -28,7 +33,19 @@ def main_menu
     answer = gets.chomp
 end
 
+def answer 
+    case 
+    when "1" = create_list
+        break 
+    when "2" = add_to_previous_list
+    end
+end
 
+def create_list
+end
+
+def add_to_previous_list
+end
 
 
 end
