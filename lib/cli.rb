@@ -79,15 +79,20 @@ def create_task
     #call create_list method 
     #make new entry and save
     task_params = {}
-    task_params[:title]
-    task_params[:description]
+    task_params[:title] = task_answer
+    task_params[:description] = description_answer
     task_params[:date] = DateTime.now
+    new_task = task.create(task_params)
 end
 
 def get_title
+    puts "What is your task?"
+    task_answer = gets.chomp
 end
 
 def get_description
+    puts "Add a description to your task!"
+    description_answer = gets.chomp
 end
 
 def add_to_previous_list
