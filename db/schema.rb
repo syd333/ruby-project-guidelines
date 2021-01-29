@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_01_28_035159) do
     t.string "category"
     t.integer "user_id"
   end
+  #list_type
 
   create_table "users", force: :cascade do |t|
     t.string "name"

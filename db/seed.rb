@@ -6,4 +6,4 @@ task1 = Task.create(title: "fix car", description: "drop off car + ask what that
 list1 = List.create(category: "Home", user_id: 1)
 
 #list categories:::
-#school, work, home 
+#school/work, home 
